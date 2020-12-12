@@ -13,6 +13,14 @@ public class Teacher {
         this.yearsTeaching = yearsTeaching;
     }
 
+    @Override
+    //TO STRING methods print out the object in a format that is customized instead of hex reference to object
+    public String toString(){
+        return "Teacher: " + this.getFirstName() + " " + this.getLastName() +
+                '\n' + '\t' + "Subject Taught: " + this.getSubject() +
+                '\n' + '\t' +  "Years in Teaching: " + this.getYearsTeaching();
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }

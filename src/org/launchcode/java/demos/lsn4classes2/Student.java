@@ -5,6 +5,8 @@ public class Student {
     private static int nextStudentId = 1;
     private String name;
     private int studentId;
+
+    private String courseOfStudy;
     private int numberOfCredits = 0;
     private double gpa = 0.0;
 
@@ -28,25 +30,65 @@ public class Student {
         return (this.name + " has a GPA of: " + this.gpa);
     }
 
+    public String getGradeLevel() {
+        // Determine the grade level of the student based on numberOfCredits
+        if(this.numberOfCredits <= 29) {
+            return "Freshman";
+        } else if (this.numberOfCredits <= 59) {
+            return "Sophomore";
+        } else if (this.numberOfCredits <= 89) {
+            return "Junior";
+        } else {
+            return "Senior";
+        }
+    }
 
-     //TODO: Uncomment and complete the getGradeLevel method here:
-//    public String getGradeLevel() {
-//        // Determine the grade level of the student based on numberOfCredits
-//    }
-
-    // TODO: Complete the addGrade method.
     public void addGrade(int courseCredits, double grade) {
         // Update the appropriate fields: numberOfCredits, gpa
+        this.numberOfCredits += courseCredits;
+        double courseQualityScore = courseCredits * grade;
+        double  totalQualityScore = this.numberOfCredits * this.getGpa();
+        this.gpa = (courseQualityScore + totalQualityScore)/this.numberOfCredits;
     }
 
     // TODO: Add your custom 'toString' method here. Make sure it returns a well-formatted String rather
     //  than just the class fields.
 
+    @Override
+    //TO STRING methods print out the object in a format that is customized instead of hex reference to object
+    public String toString(){
+        return "Student ID: " + this.getStudentId() +
+                '\n' + "Student Name: " + this.getName() +
+                '\n' + "Course of Study: " + this.getCourseOfStudy() +
+                '\n' + "Number of Credits Earned: " + this.getNumberOfCredits() +
+                '\n' + "Student GPA: " + this.getGpa();
+
+    }
+
     // TODO: Add your custom 'equals' method here. Consider which fields should match in order to call two
     //  Student objects equal.
 
+    @Override
+    public boolean equals (Object toBeCompared) {
+        //check to see if the items to be compared are the same - same object?
+        if(toBeCompared == this){
+            return true;
+        }
+        //check to see if the item to be compared is null
+        if(toBeCompared == null){
+            return false;
+        }
+        // check to see if the class is the same
+        if (toBeCompared.getClass() != this.getClass()) {
+            return false;
+        }
+        //check to see if object we are bringing in is valid - check if student gpa is the same - this should be a unique value
+        Student student2 = (Student) toBeCompared;
+        return this.gpa == student2.gpa;
+    }
+
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getStudentId() {
@@ -61,6 +103,14 @@ public class Student {
         return gpa;
     }
 
+    public String getCourseOfStudy() {
+        return courseOfStudy;
+    }
+
+    public void setCourseOfStudy(String courseOfStudy) {
+        this.courseOfStudy = courseOfStudy;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -73,7 +123,7 @@ public class Student {
         this.gpa = gpa;
     }
 
-    private void setNumberOfCredits(int numberOfCredits) {
+    public void setNumberOfCredits(int numberOfCredits) {
         this.numberOfCredits = numberOfCredits;
     }
 
