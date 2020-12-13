@@ -1,10 +1,11 @@
 package exercises.technology;
 
-public class Computer {
+public class Computer extends AbstractEntity {
     private int yearMade;
     private String processorType;
     private String operatingSystem;
     private final int currentYear = 2020;
+    private int identificationNumber = 0;
 
     //constructor
     public Computer (int year, String processor,String os) {
@@ -30,6 +31,10 @@ public class Computer {
         }
     }
 
+    public  int createID() {
+        return identificationNumber ++;
+    }
+
     //getters only - not setting anything through child classes
     public int getYearMade() {
         return yearMade;
@@ -43,7 +48,8 @@ public class Computer {
         return operatingSystem;
     }
 
-
-
+    public int getIdentificationNumber() {
+        return identificationNumber;
+    }
 
 }

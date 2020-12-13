@@ -5,6 +5,7 @@ public class SmartPhone extends Computer {
     private boolean extendedWarranty;
     private String carrier;
     private String color;
+    private int smartPhoneID = 100;
 
     //constructor
     public SmartPhone (int year, String processor,String os, String model, boolean extWarr, String carrier, String color) {
@@ -22,6 +23,10 @@ public class SmartPhone extends Computer {
         } else {
             return false;
         }
+    }
+
+    public  int createID() {
+        return smartPhoneID ++;
     }
 
     public String toString() {

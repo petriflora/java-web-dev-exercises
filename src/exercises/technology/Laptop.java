@@ -5,6 +5,7 @@ public class Laptop extends Computer {
     private int systemMemory;
     private int screenWidth;
     private double weight;
+    private int laptopID = 10;
 
     //constructor
     public Laptop (int year, String processor,String os, String model, int ram, int screen, double weight) {
@@ -30,6 +31,9 @@ public class Laptop extends Computer {
         } else {
             return false;
         }
+    }
+    public  int createID() {
+        return laptopID ++;
     }
 
     public String toString() {
