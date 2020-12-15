@@ -1,4 +1,4 @@
-package exercises.technology;
+package exercises.technology.main;
 
 public class Computer extends AbstractEntity {
     private int yearMade;

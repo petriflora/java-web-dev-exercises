@@ -1,4 +1,4 @@
-package exercises.technology;
+package exercises.technology.main;
 
 public abstract class AbstractEntity {
     private int idNumber;

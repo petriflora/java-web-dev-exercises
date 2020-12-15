@@ -1,4 +1,7 @@
-package exercises.technology;
+package exercises.technology.test;
+import exercises.technology.main.Computer;
+import exercises.technology.main.Laptop;
+import exercises.technology.main.SmartPhone;
 import org.junit.Before;
 import static org.junit.Assert.*;
 

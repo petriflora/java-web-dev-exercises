@@ -1,7 +1,4 @@
-package exercises.technology;
-
-import org.junit.Test;
-import org.launchcode.java.demos.lsn6inheritance.HouseCat;
+package exercises.technology.main;
 
 public class Program {
     public static void main(String[] args){

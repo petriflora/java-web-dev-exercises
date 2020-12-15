@@ -1,4 +1,4 @@
-package exercises.technology;
+package exercises.technology.main;
 
 public class SmartPhone extends Computer {
     private String model;
