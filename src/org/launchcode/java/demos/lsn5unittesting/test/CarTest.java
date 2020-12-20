@@ -50,6 +50,13 @@ public class CarTest {
         test_car.drive(550);
         assertEquals(0, test_car.getGasTankLevel(), .001);
     }
+    //from class: this is Mike's version:
+    @Test
+    public void gasTankShouldBeEmptyIfRangeExceededMikesVersion() {
+        test_car.drive(700);
+        assertEquals(0, test_car.getGasTankLevel(), .001);
+    }
+
     //TODO: can't have more gas than tank size, expect an exception
     @Test(expected = IllegalArgumentException.class)
     public void testGasOverfillException() {

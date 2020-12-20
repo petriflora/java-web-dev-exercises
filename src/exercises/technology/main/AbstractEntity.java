@@ -1,7 +1,15 @@
 package exercises.technology.main;
 
 public abstract class AbstractEntity {
-    private int idNumber;
+    private static int idCounter = 0;
+    private int id;
 
-    public abstract int createID();
+    public AbstractEntity(){
+        this.id = idCounter;
+        idCounter  ++;
+    }
+
+    public int getId() {
+        return id;
+    }
 }
