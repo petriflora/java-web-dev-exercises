@@ -13,13 +13,14 @@ public class StringSearch {
 //                "had no pictures or conversations in it, " +
 //                "'and what is the use of a book,' thought " +
 //                "Alice 'without pictures or conversation?'";
-        Scanner searchTermInput = new Scanner(System.in);
-        System.out.println("Enter the search term:");
-//        Integer index = quote.indexOf(searchTermInput);
-//        String resultMessage = Results.results(searchTermInput);
+//        Scanner searchTermInput = new Scanner(System.in);
+//        System.out.println("Enter the search term:");
+//        Integer index = quote.indexOf(String.valueOf(searchTermInput));
+//
+//        String resultMessage = Results.results(index);
 //        System.out.println(resultMessage);
     }
 }
 
-//does not work - error message "C:\Users\jemor\Desktop\JavaPractice\java-web-dev-exercises\src\exercises\StringSearch.java:19:48
-//java: incompatible types: java.util.Scanner cannot be converted to java.lang.String"
+//does not work - C:\Users\jemor\Desktop\JavaPractice\java-web-dev-exercises\src\exercises\class1\StringSearch.java:19:48
+//java: incompatible types: java.lang.Integer cannot be converted to java.lang.String

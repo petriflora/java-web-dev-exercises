@@ -92,7 +92,7 @@ public class Car {
         this.setGasTankLevel(gas + this.getGasTankLevel());
     }
 
-    public void addGas(double gas) {
-        this.setGasTankLevel(gas + this.getGasTankLevel);
-    }
+//    public void addGas(double gas) {
+//        this.setGasTankLevel(gas + this.getGasTankLevel);
+//    }
 }
